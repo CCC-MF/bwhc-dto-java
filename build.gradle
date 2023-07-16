@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+    id 'org.jsonschema2pojo' version '1.2.1'
+}
+
+group = 'de.ukw.ccc'
+version = '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.7.1'
+}
+
+jsonSchema2Pojo {
+    annotationStyle = 'jackson'
+    sourceType = 'jsonschema'
+    includeConstructors = false
+    constructorsRequiredPropertiesOnly = true
+    includeSetters = true
+    includeDynamicBuilders = false
+    includeJsonTypeInfoAnnotation = false
+    refFragmentPathDelimiters = "#/."
+
+    targetPackage = 'de.ukw.ccc.bwhc.dto'
+    targetVersion = "11"
+}
+
+jar.dependsOn(generateJsonSchema2Pojo)

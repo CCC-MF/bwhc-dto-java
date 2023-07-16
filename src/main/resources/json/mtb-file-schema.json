@@ -1,0 +1,2078 @@
+{
+  "properties": {
+    "diagnoses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "histologyResults": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statusHistory": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "$ref": "#/definitions/Status"
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "required": [
+                "status",
+                "date"
+              ]
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "icd10": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "patient": {
+            "type": "string"
+          },
+          "whoGrade": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "$ref": "#/definitions/WHOGrade"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "recordedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "guidelineTreatmentStatus": {
+            "$ref": "#/definitions/GuidelineTreatmentStatus"
+          },
+          "icdO3T": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "patient"
+        ]
+      }
+    },
+    "ngsReports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rnaSeqs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "librarySize": {
+                  "type": "integer"
+                },
+                "cohortRanking": {
+                  "type": "integer"
+                },
+                "rawCounts": {
+                  "type": "integer"
+                },
+                "ensemblId": {
+                  "type": "string"
+                },
+                "transcriptId": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "fromNGS": {
+                  "type": "boolean"
+                },
+                "tissueCorrectedExpression": {
+                  "type": "boolean"
+                },
+                "entrezId": {
+                  "type": "string"
+                },
+                "gene": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "ensemblId": {
+                      "type": "string"
+                    },
+                    "hgncId": {
+                      "type": "string"
+                    },
+                    "symbol": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "fragmentsPerKilobaseMillion": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "transcriptId",
+                "id",
+                "librarySize",
+                "ensemblId",
+                "tissueCorrectedExpression",
+                "gene",
+                "entrezId",
+                "fromNGS",
+                "rawCounts",
+                "fragmentsPerKilobaseMillion"
+              ]
+            }
+          },
+          "tmb": {
+            "type": "number"
+          },
+          "simpleVariants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "dbSNPId": {
+                  "type": "string"
+                },
+                "aminoAcidChange": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ]
+                },
+                "cosmicId": {
+                  "type": "string"
+                },
+                "chromosome": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "altAllele": {
+                  "type": "string"
+                },
+                "gene": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "ensemblId": {
+                      "type": "string"
+                    },
+                    "hgncId": {
+                      "type": "string"
+                    },
+                    "symbol": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "dnaChange": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ]
+                },
+                "interpretation": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ]
+                },
+                "startEnd": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "start"
+                  ]
+                },
+                "refAllele": {
+                  "type": "string"
+                },
+                "readDepth": {
+                  "type": "integer"
+                },
+                "allelicFrequency": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "interpretation",
+                "allelicFrequency",
+                "startEnd",
+                "refAllele",
+                "chromosome",
+                "readDepth",
+                "altAllele"
+              ]
+            }
+          },
+          "msi": {
+            "type": "number"
+          },
+          "copyNumberVariants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "reportedFocality": {
+                  "type": "string"
+                },
+                "reportedAffectedGenes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "ensemblId": {
+                        "type": "string"
+                      },
+                      "hgncId": {
+                        "type": "string"
+                      },
+                      "symbol": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "totalCopyNumber": {
+                  "type": "integer"
+                },
+                "cnA": {
+                  "type": "number"
+                },
+                "startRange": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "start"
+                  ]
+                },
+                "type": {
+                  "$ref": "#/definitions/Type"
+                },
+                "endRange": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "start": {
+                      "type": "number"
+                    },
+                    "end": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "start"
+                  ]
+                },
+                "chromosome": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "cnB": {
+                  "type": "number"
+                },
+                "relativeCopyNumber": {
+                  "type": "number"
+                },
+                "copyNumberNeutralLoH": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "ensemblId": {
+                        "type": "string"
+                      },
+                      "hgncId": {
+                        "type": "string"
+                      },
+                      "symbol": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "startRange",
+                "endRange",
+                "chromosome"
+              ]
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "tumorCellContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "specimen": {
+                "type": "string"
+              },
+              "method": {
+                "$ref": "#/definitions/Method"
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "specimen",
+              "method",
+              "value"
+            ]
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "kitManufacturer": {
+                  "type": "string"
+                },
+                "pipeline": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "kitType": {
+                  "type": "string"
+                },
+                "sequencer": {
+                  "type": "string"
+                },
+                "referenceGenome": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kitManufacturer",
+                "kitType",
+                "sequencer",
+                "referenceGenome"
+              ]
+            }
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "specimen": {
+            "type": "string"
+          },
+          "dnaFusions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "fusionPartner5prime": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "chromosome": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "number"
+                    },
+                    "gene": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "ensemblId": {
+                          "type": "string"
+                        },
+                        "hgncId": {
+                          "type": "string"
+                        },
+                        "symbol": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "chromosome",
+                    "position",
+                    "gene"
+                  ]
+                },
+                "fusionPartner3prime": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "chromosome": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "number"
+                    },
+                    "gene": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "ensemblId": {
+                          "type": "string"
+                        },
+                        "hgncId": {
+                          "type": "string"
+                        },
+                        "symbol": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "chromosome",
+                    "position",
+                    "gene"
+                  ]
+                },
+                "reportedNumReads": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id"
+              ]
+            }
+          },
+          "rnaFusions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "fusionPartner3prime": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "transcriptId": {
+                      "type": "string"
+                    },
+                    "exon": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "number"
+                    },
+                    "strand": {
+                      "$ref": "#/definitions/Strand"
+                    },
+                    "gene": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "ensemblId": {
+                          "type": "string"
+                        },
+                        "hgncId": {
+                          "type": "string"
+                        },
+                        "symbol": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "transcriptId",
+                    "strand",
+                    "position",
+                    "exon",
+                    "gene"
+                  ]
+                },
+                "fusionPartner5prime": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "transcriptId": {
+                      "type": "string"
+                    },
+                    "exon": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "number"
+                    },
+                    "strand": {
+                      "$ref": "#/definitions/Strand"
+                    },
+                    "gene": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "ensemblId": {
+                          "type": "string"
+                        },
+                        "hgncId": {
+                          "type": "string"
+                        },
+                        "symbol": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "transcriptId",
+                    "strand",
+                    "position",
+                    "exon",
+                    "gene"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                },
+                "reportedNumReads": {
+                  "type": "integer"
+                },
+                "cosmicId": {
+                  "type": "string"
+                },
+                "effect": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ]
+            }
+          },
+          "brcaness": {
+            "type": "number"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "sequencingType": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "issueDate",
+          "id",
+          "specimen",
+          "sequencingType",
+          "metadata",
+          "patient"
+        ]
+      }
+    },
+    "molecularPathologyFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "performingInstitute": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "specimen": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "note",
+          "specimen",
+          "patient"
+        ]
+      }
+    },
+    "familyMemberDiagnoses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "$ref": "#/definitions/RelationshipCode"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "relationship"
+        ]
+      }
+    },
+    "ecogStatus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "$ref": "#/definitions/ECOG"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "value"
+        ]
+      }
+    },
+    "previousGuidelineTherapies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis": {
+            "type": "string"
+          },
+          "medication": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "system": {
+                  "$ref": "#/definitions/System"
+                },
+                "display": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "system"
+              ]
+            }
+          },
+          "therapyLine": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diagnosis",
+          "id",
+          "patient"
+        ]
+      }
+    },
+    "histologyReports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tumorCellContent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "specimen": {
+                "type": "string"
+              },
+              "method": {
+                "$ref": "#/definitions/Method"
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "specimen",
+              "method",
+              "value"
+            ]
+          },
+          "tumorMorphology": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "specimen": {
+                "type": "string"
+              },
+              "value": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code"
+                ]
+              },
+              "patient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "value",
+              "specimen",
+              "patient"
+            ]
+          },
+          "specimen": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "specimen",
+          "patient"
+        ]
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "priority": {
+            "$ref": "#/definitions/Priority"
+          },
+          "diagnosis": {
+            "type": "string"
+          },
+          "medication": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "system": {
+                  "$ref": "#/definitions/System"
+                },
+                "display": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "system"
+              ]
+            }
+          },
+          "supportingVariants": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ngsReport": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "levelOfEvidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "grading": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "$ref": "#/definitions/GradingCode"
+                  },
+                  "display": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code"
+                ]
+              },
+              "addendums": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ]
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "grading"
+            ]
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diagnosis",
+          "id",
+          "patient"
+        ]
+      }
+    },
+    "lastGuidelineTherapies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reasonStopped": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "$ref": "#/definitions/StopReason"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "diagnosis": {
+            "type": "string"
+          },
+          "medication": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "system": {
+                  "$ref": "#/definitions/System"
+                },
+                "display": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "system"
+              ]
+            }
+          },
+          "therapyLine": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "period": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "start": {
+                "type": "string",
+                "format": "date"
+              },
+              "end": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": [
+              "start"
+            ]
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diagnosis",
+          "id",
+          "patient"
+        ]
+      }
+    },
+    "molecularTherapies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "notDoneReason": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "$ref": "#/definitions/NotDoneReason"
+                        },
+                        "display": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code"
+                      ]
+                    },
+                    "basedOn": {
+                      "type": "string"
+                    },
+                    "patient": {
+                      "type": "string"
+                    },
+                    "recordedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basedOn",
+                    "id",
+                    "recordedOn",
+                    "patient",
+                    "notDoneReason"
+                  ]
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "medication": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "code": {
+                            "type": "string"
+                          },
+                          "system": {
+                            "$ref": "#/definitions/System"
+                          },
+                          "display": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "code",
+                          "system"
+                        ]
+                      }
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "basedOn": {
+                      "type": "string"
+                    },
+                    "dosage": {
+                      "$ref": "#/definitions/Dosage"
+                    },
+                    "period": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "start": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "end": {
+                          "type": "string",
+                          "format": "date"
+                        }
+                      },
+                      "required": [
+                        "start",
+                        "end"
+                      ]
+                    },
+                    "patient": {
+                      "type": "string"
+                    },
+                    "recordedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basedOn",
+                    "id",
+                    "recordedOn",
+                    "period",
+                    "patient"
+                  ]
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "medication": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "code": {
+                            "type": "string"
+                          },
+                          "system": {
+                            "$ref": "#/definitions/System"
+                          },
+                          "display": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "code",
+                          "system"
+                        ]
+                      }
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "basedOn": {
+                      "type": "string"
+                    },
+                    "dosage": {
+                      "$ref": "#/definitions/Dosage"
+                    },
+                    "period": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "start": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "end": {
+                          "type": "string",
+                          "format": "date"
+                        }
+                      },
+                      "required": [
+                        "start"
+                      ]
+                    },
+                    "patient": {
+                      "type": "string"
+                    },
+                    "recordedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basedOn",
+                    "id",
+                    "recordedOn",
+                    "period",
+                    "patient"
+                  ]
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "reasonStopped": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "code": {
+                          "$ref": "#/definitions/StopReason"
+                        },
+                        "display": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code"
+                      ]
+                    },
+                    "medication": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "code": {
+                            "type": "string"
+                          },
+                          "system": {
+                            "$ref": "#/definitions/System"
+                          },
+                          "display": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "code",
+                          "system"
+                        ]
+                      }
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "basedOn": {
+                      "type": "string"
+                    },
+                    "dosage": {
+                      "$ref": "#/definitions/Dosage"
+                    },
+                    "period": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "start": {
+                          "type": "string",
+                          "format": "date"
+                        },
+                        "end": {
+                          "type": "string",
+                          "format": "date"
+                        }
+                      },
+                      "required": [
+                        "start",
+                        "end"
+                      ]
+                    },
+                    "patient": {
+                      "type": "string"
+                    },
+                    "recordedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basedOn",
+                    "id",
+                    "reasonStopped",
+                    "recordedOn",
+                    "period",
+                    "patient"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "history"
+        ]
+      }
+    },
+    "studyInclusionRequests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "nctNumber": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "id",
+          "nctNumber",
+          "patient"
+        ]
+      }
+    },
+    "geneticCounsellingRequests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "reason"
+        ]
+      }
+    },
+    "claimResponses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "reason": {
+            "$ref": "#/definitions/Reason"
+          },
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/definitions/Status"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "claim",
+          "issuedOn",
+          "status",
+          "patient"
+        ]
+      }
+    },
+    "rebiopsyRequests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "specimen": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "specimen"
+        ]
+      }
+    },
+    "histologyReevaluationRequests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "specimen": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "specimen"
+        ]
+      }
+    },
+    "carePlans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis": {
+            "type": "string"
+          },
+          "studyInclusionRequests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "noTargetFinding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "patient": {
+                "type": "string"
+              },
+              "diagnosis": {
+                "type": "string"
+              },
+              "issuedOn": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": [
+              "patient",
+              "diagnosis"
+            ]
+          },
+          "geneticCounsellingRequest": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "rebiopsyRequests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diagnosis",
+          "id",
+          "patient"
+        ]
+      }
+    },
+    "episode": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "patient": {
+          "type": "string"
+        },
+        "period": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date"
+            },
+            "end": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "start"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "patient",
+        "period"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "patient": {
+            "type": "string"
+          },
+          "issuedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "therapy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "patient",
+          "issuedOn",
+          "therapy"
+        ]
+      }
+    },
+    "specimens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "collection": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "localization": {
+                "$ref": "#/definitions/Localization"
+              },
+              "method": {
+                "$ref": "#/definitions/Method"
+              }
+            },
+            "required": [
+              "date",
+              "localization",
+              "method"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "icd10": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "type": {
+            "$ref": "#/definitions/Type"
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "icd10",
+          "patient"
+        ]
+      }
+    },
+    "consent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "patient": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "id",
+        "patient",
+        "status"
+      ]
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "therapy": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "$ref": "#/definitions/RECIST"
+              },
+              "display": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ]
+          },
+          "patient": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "therapy",
+          "id",
+          "effectiveDate",
+          "value",
+          "patient"
+        ]
+      }
+    },
+    "patient": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "managingZPM": {
+          "type": "string"
+        },
+        "insurance": {
+          "type": "string"
+        },
+        "dateOfDeath": {
+          "$ref": "#/definitions/YearMonth"
+        },
+        "gender": {
+          "$ref": "#/definitions/Gender"
+        },
+        "birthDate": {
+          "$ref": "#/definitions/YearMonth"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "gender"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Reason": {
+      "type": "string",
+      "enum": [
+        "insufficient-evidence",
+        "other",
+        "standard-therapy-not-exhausted"
+      ]
+    },
+    "RECIST": {
+      "type": "string",
+      "enum": [
+        "NYA",
+        "SD",
+        "PR",
+        "CR",
+        "NA",
+        "MR",
+        "PD"
+      ]
+    },
+    "ECOG": {
+      "type": "string",
+      "enum": [
+        "1",
+        "4",
+        "2",
+        "0",
+        "3"
+      ]
+    },
+    "Strand": {
+      "type": "string",
+      "enum": [
+        "+",
+        "-"
+      ]
+    },
+    "Localization": {
+      "type": "string",
+      "enum": [
+        "metastasis",
+        "primary-tumor",
+        "unknown"
+      ]
+    },
+    "Priority": {
+      "type": "string",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "RelationshipCode": {
+      "type": "string",
+      "enum": [
+        "EXT",
+        "FAMMEMB"
+      ]
+    },
+    "Gender": {
+      "type": "string",
+      "enum": [
+        "female",
+        "male",
+        "other",
+        "unknown"
+      ]
+    },
+    "GuidelineTreatmentStatus": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "exhausted",
+        "non-exhausted",
+        "no-guidelines-available",
+        "impossible"
+      ]
+    },
+    "StopReason": {
+      "type": "string",
+      "enum": [
+        "patient-wish",
+        "progression",
+        "unknown",
+        "deterioration",
+        "chronic-remission",
+        "toxicity",
+        "other"
+      ]
+    },
+    "WHOGrade": {
+      "type": "string",
+      "enum": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ]
+    },
+    "System": {
+      "type": "string",
+      "enum": [
+        "ATC",
+        "Unregistered"
+      ]
+    },
+    "Method": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "biopsy",
+        "resection",
+        "liquid-biopsy",
+        "cytology"
+      ]
+    },
+    "GradingCode": {
+      "type": "string",
+      "enum": [
+        "m1A",
+        "m2A",
+        "m2C",
+        "m2B",
+        "m1B",
+        "m4",
+        "m1C",
+        "m3"
+      ]
+    },
+    "YearMonth": {
+      "type": "string",
+      "format": "date"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "rejected"
+      ]
+    },
+    "Type": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "fresh-tissue",
+        "cryo-frozen",
+        "liquid-biopsy",
+        "FFPE"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "consent",
+    "episode",
+    "patient"
+  ]
+}
