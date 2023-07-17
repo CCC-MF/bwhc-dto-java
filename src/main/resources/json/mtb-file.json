@@ -19,7 +19,7 @@
               "additionalProperties": false,
               "properties": {
                 "status": {
-                  "$ref": "#/definitions/Status"
+                  "$ref": "#/definitions/StatusHistoryStatus"
                 },
                 "date": {
                   "type": "string",
@@ -36,22 +36,7 @@
             "type": "string"
           },
           "icd10": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "type": "string"
-              },
-              "display": {
-                "type": "string"
-              },
-              "version": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "code"
-            ]
+            "$ref": "#/definitions/ICD10"
           },
           "patient": {
             "type": "string"
@@ -64,6 +49,9 @@
                 "$ref": "#/definitions/WHOGrade"
               },
               "display": {
+                "type": "string"
+              },
+              "system": {
                 "type": "string"
               },
               "version": {
@@ -203,6 +191,9 @@
                     "display": {
                       "type": "string"
                     },
+                    "system": {
+                      "type": "string"
+                    },
                     "version": {
                       "type": "string"
                     }
@@ -251,6 +242,9 @@
                     "display": {
                       "type": "string"
                     },
+                    "system": {
+                      "type": "string"
+                    },
                     "version": {
                       "type": "string"
                     }
@@ -267,6 +261,9 @@
                       "type": "string"
                     },
                     "display": {
+                      "type": "string"
+                    },
+                    "system": {
                       "type": "string"
                     },
                     "version": {
@@ -369,7 +366,7 @@
                   ]
                 },
                 "type": {
-                  "$ref": "#/definitions/Type"
+                  "$ref": "#/definitions/CNVType"
                 },
                 "endRange": {
                   "type": "object",
@@ -443,7 +440,7 @@
                 "type": "string"
               },
               "method": {
-                "$ref": "#/definitions/Method"
+                "$ref": "#/definitions/ObservationMethod"
               },
               "value": {
                 "type": "number"
@@ -768,6 +765,9 @@
               "display": {
                 "type": "string"
               },
+              "system": {
+                "type": "string"
+              },
               "version": {
                 "type": "string"
               }
@@ -808,6 +808,9 @@
                 "$ref": "#/definitions/ECOG"
               },
               "display": {
+                "type": "string"
+              },
+              "system": {
                 "type": "string"
               },
               "version": {
@@ -897,7 +900,7 @@
                 "type": "string"
               },
               "method": {
-                "$ref": "#/definitions/Method"
+                "$ref": "#/definitions/ObservationMethod"
               },
               "value": {
                 "type": "number"
@@ -931,6 +934,9 @@
                     "type": "string"
                   },
                   "display": {
+                    "type": "string"
+                  },
+                  "system": {
                     "type": "string"
                   },
                   "version": {
@@ -1037,6 +1043,9 @@
                   "display": {
                     "type": "string"
                   },
+                  "system": {
+                    "type": "string"
+                  },
                   "version": {
                     "type": "string"
                   }
@@ -1055,6 +1064,9 @@
                       "type": "string"
                     },
                     "display": {
+                      "type": "string"
+                    },
+                    "system": {
                       "type": "string"
                     },
                     "version": {
@@ -1097,6 +1109,9 @@
                 "$ref": "#/definitions/StopReason"
               },
               "display": {
+                "type": "string"
+              },
+              "system": {
                 "type": "string"
               },
               "version": {
@@ -1179,293 +1194,102 @@
             "type": "array",
             "items": {
               "type": "object",
-              "oneOf": [
-                {
+              "additionalProperties": false,
+              "properties": {
+                "reasonStopped": {
+                  "type": "object",
                   "additionalProperties": false,
                   "properties": {
-                    "id": {
+                    "code": {
+                      "$ref": "#/definitions/MolecularTherapyStopReason"
+                    },
+                    "display": {
                       "type": "string"
                     },
-                    "notDoneReason": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "code": {
-                          "$ref": "#/definitions/NotDoneReason"
-                        },
-                        "display": {
-                          "type": "string"
-                        },
-                        "version": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "code"
-                      ]
-                    },
-                    "basedOn": {
+                    "system": {
                       "type": "string"
                     },
-                    "patient": {
-                      "type": "string"
-                    },
-                    "recordedOn": {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    "note": {
+                    "version": {
                       "type": "string"
                     }
                   },
                   "required": [
-                    "basedOn",
-                    "id",
-                    "recordedOn",
-                    "patient",
-                    "notDoneReason"
+                    "code"
                   ]
                 },
-                {
-                  "additionalProperties": false,
-                  "properties": {
-                    "medication": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                          "code": {
-                            "type": "string"
-                          },
-                          "system": {
-                            "$ref": "#/definitions/System"
-                          },
-                          "display": {
-                            "type": "string"
-                          },
-                          "version": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "code",
-                          "system"
-                        ]
+                "medication": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "system": {
+                        "$ref": "#/definitions/System"
+                      },
+                      "display": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
                       }
                     },
-                    "id": {
-                      "type": "string"
-                    },
-                    "basedOn": {
-                      "type": "string"
-                    },
-                    "dosage": {
-                      "$ref": "#/definitions/Dosage"
-                    },
-                    "period": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "start": {
-                          "type": "string",
-                          "format": "date"
-                        },
-                        "end": {
-                          "type": "string",
-                          "format": "date"
-                        }
-                      },
-                      "required": [
-                        "start",
-                        "end"
-                      ]
-                    },
-                    "patient": {
-                      "type": "string"
-                    },
-                    "recordedOn": {
+                    "required": [
+                      "code",
+                      "system"
+                    ]
+                  }
+                },
+                "id": {
+                  "type": "string"
+                },
+                "basedOn": {
+                  "type": "string"
+                },
+                "dosage": {
+                  "$ref": "#/definitions/Dosage"
+                },
+                "period": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "start": {
                       "type": "string",
                       "format": "date"
                     },
-                    "note": {
-                      "type": "string"
+                    "end": {
+                      "type": "string",
+                      "format": "date"
                     }
                   },
                   "required": [
-                    "basedOn",
-                    "id",
-                    "recordedOn",
-                    "period",
-                    "patient"
+                    "start",
+                    "end"
                   ]
                 },
-                {
-                  "additionalProperties": false,
-                  "properties": {
-                    "medication": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                          "code": {
-                            "type": "string"
-                          },
-                          "system": {
-                            "$ref": "#/definitions/System"
-                          },
-                          "display": {
-                            "type": "string"
-                          },
-                          "version": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "code",
-                          "system"
-                        ]
-                      }
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "basedOn": {
-                      "type": "string"
-                    },
-                    "dosage": {
-                      "$ref": "#/definitions/Dosage"
-                    },
-                    "period": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "start": {
-                          "type": "string",
-                          "format": "date"
-                        },
-                        "end": {
-                          "type": "string",
-                          "format": "date"
-                        }
-                      },
-                      "required": [
-                        "start"
-                      ]
-                    },
-                    "patient": {
-                      "type": "string"
-                    },
-                    "recordedOn": {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    "note": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "basedOn",
-                    "id",
-                    "recordedOn",
-                    "period",
-                    "patient"
-                  ]
+                "patient": {
+                  "type": "string"
                 },
-                {
-                  "additionalProperties": false,
-                  "properties": {
-                    "reasonStopped": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "code": {
-                          "$ref": "#/definitions/StopReason"
-                        },
-                        "display": {
-                          "type": "string"
-                        },
-                        "version": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "code"
-                      ]
-                    },
-                    "medication": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                          "code": {
-                            "type": "string"
-                          },
-                          "system": {
-                            "$ref": "#/definitions/System"
-                          },
-                          "display": {
-                            "type": "string"
-                          },
-                          "version": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "code",
-                          "system"
-                        ]
-                      }
-                    },
-                    "id": {
-                      "type": "string"
-                    },
-                    "basedOn": {
-                      "type": "string"
-                    },
-                    "dosage": {
-                      "$ref": "#/definitions/Dosage"
-                    },
-                    "period": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "start": {
-                          "type": "string",
-                          "format": "date"
-                        },
-                        "end": {
-                          "type": "string",
-                          "format": "date"
-                        }
-                      },
-                      "required": [
-                        "start",
-                        "end"
-                      ]
-                    },
-                    "patient": {
-                      "type": "string"
-                    },
-                    "recordedOn": {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    "note": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "basedOn",
-                    "id",
-                    "reasonStopped",
-                    "recordedOn",
-                    "period",
-                    "patient"
-                  ]
+                "recordedOn": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "status": {
+                  "$ref": "#/definitions/MolecularTherapyStatus"
+                },
+                "note": {
+                  "type": "string"
                 }
+              },
+              "required": [
+                "basedOn",
+                "id",
+                "reasonStopped",
+                "recordedOn",
+                "period",
+                "patient"
               ]
             }
           }
@@ -1549,7 +1373,7 @@
             "type": "string"
           },
           "status": {
-            "$ref": "#/definitions/Status"
+            "$ref": "#/definitions/ClaimStatus"
           },
           "issuedOn": {
             "type": "string",
@@ -1786,22 +1610,7 @@
             "type": "string"
           },
           "icd10": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "type": "string"
-              },
-              "display": {
-                "type": "string"
-              },
-              "version": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "code"
-            ]
+            "$ref": "#/definitions/ICD10"
           },
           "type": {
             "$ref": "#/definitions/Type"
@@ -1861,6 +1670,9 @@
                 "$ref": "#/definitions/RECIST"
               },
               "display": {
+                "type": "string"
+              },
+              "system": {
                 "type": "string"
               },
               "version": {
@@ -2007,6 +1819,23 @@
         "other"
       ]
     },
+    "MolecularTherapyStopReason": {
+      "type": "string",
+      "enum": [
+        "remission",
+        "patient-wish",
+        "payment-ended",
+        "medical-reason",
+        "progression",
+        "patient-death",
+        "toxicity",
+        "other-therapy-chosen",
+        "continued-externally",
+        "deterioration",
+        "other",
+        "unknown"
+      ]
+    },
     "WHOGrade": {
       "type": "string",
       "enum": [
@@ -2033,6 +1862,13 @@
         "cytology"
       ]
     },
+    "ObservationMethod": {
+      "type": "string",
+      "enum": [
+        "histologic",
+        "bioinformatic"
+      ]
+    },
     "GradingCode": {
       "type": "string",
       "enum": [
@@ -2057,6 +1893,31 @@
         "rejected"
       ]
     },
+    "ClaimStatus": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "rejected"
+      ]
+    },
+    "StatusHistoryStatus": {
+      "type": "string",
+      "enum": [
+        "tumor-free",
+        "local",
+        "metastasized",
+        "unknown"
+      ]
+    },
+    "MolecularTherapyStatus": {
+      "type": "string",
+      "enum": [
+        "not-done",
+        "on-going",
+        "stopped",
+        "completed"
+      ]
+    },
     "Type": {
       "type": "string",
       "enum": [
@@ -2065,6 +1926,42 @@
         "cryo-frozen",
         "liquid-biopsy",
         "FFPE"
+      ]
+    },
+    "CNVType": {
+      "type": "string",
+      "enum": [
+        "low-level-gain",
+        "high-level-gain",
+        "loss"
+      ]
+    },
+    "Dosage": {
+      "type": "string",
+      "enum": [
+        ">=50%",
+        "<50%"
+      ]
+    },
+    "ICD10": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
       ]
     }
   },

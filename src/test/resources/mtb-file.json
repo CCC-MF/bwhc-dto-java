@@ -1,0 +1,1592 @@
+{
+  "patient": {
+    "id": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+    "gender": "female",
+    "birthDate": "1971-03",
+    "insurance": "Barmer"
+  },
+  "consent": {
+    "id": "ca442bc6-47e7-4914-b18e-c5396476ace8",
+    "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+    "status": "active"
+  },
+  "episode": {
+    "id": "17df3e33-4faf-4fa0-8bb1-6f56fdf9c7fd",
+    "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+    "period": {
+      "start": "2021-11-18"
+    }
+  },
+  "diagnoses": [
+    {
+      "id": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "recordedOn": "2023-07-17",
+      "icd10": {
+        "code": "C16.0",
+        "display": "Bösartige Neubildung: Kardia",
+        "version": "2023",
+        "system": "ICD-10-GM"
+      },
+      "whoGrade": {
+        "code": "III",
+        "system": "WHO-Grading-CNS-Tumors"
+      },
+      "histologyResults": [
+        "90851308-579e-49a9-956e-277b481bacbf"
+      ],
+      "statusHistory": [
+        {
+          "status": "local",
+          "date": "2023-07-17"
+        },
+        {
+          "status": "unknown",
+          "date": "2023-07-17"
+        }
+      ],
+      "guidelineTreatmentStatus": "no-guidelines-available"
+    }
+  ],
+  "familyMemberDiagnoses": [
+    {
+      "id": "4f83b07c-69e8-4577-a40f-4891dfa264de",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "relationship": {
+        "code": "EXT",
+        "system": "http://terminology.hl7.org/ValueSet/v3-FamilyMember"
+      }
+    },
+    {
+      "id": "48b76521-06fc-4357-b079-23cd800b57c0",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "relationship": {
+        "code": "EXT",
+        "system": "http://terminology.hl7.org/ValueSet/v3-FamilyMember"
+      }
+    }
+  ],
+  "previousGuidelineTherapies": [
+    {
+      "id": "b80b6f40-e7f1-45f3-8b6f-cbb0a5efc541",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "therapyLine": 4,
+      "medication": [
+        {
+          "code": "L01XC18",
+          "system": "ATC",
+          "display": "Pembrolizumab",
+          "version": "2020"
+        },
+        {
+          "code": "L01XE21",
+          "system": "ATC",
+          "display": "Regorafenib",
+          "version": "2020"
+        },
+        {
+          "code": "L01XC17",
+          "system": "ATC",
+          "display": "Nivolumab",
+          "version": "2020"
+        }
+      ]
+    },
+    {
+      "id": "d156921b-b2b2-44d4-bd34-52814884a82f",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "therapyLine": 4,
+      "medication": [
+        {
+          "code": "L01XX46",
+          "system": "ATC",
+          "display": "Olaparib",
+          "version": "2020"
+        },
+        {
+          "code": "L01XX32",
+          "system": "ATC",
+          "display": "Bortezomib",
+          "version": "2020"
+        },
+        {
+          "code": "L01XE02",
+          "system": "ATC",
+          "display": "Gefitinib",
+          "version": "2020"
+        }
+      ]
+    },
+    {
+      "id": "dd764cd9-907b-43a3-b985-6100d02b6649",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "therapyLine": 1,
+      "medication": [
+        {
+          "code": "L01XC28",
+          "system": "ATC",
+          "display": "Durvalumab",
+          "version": "2020"
+        },
+        {
+          "code": "L01XC06",
+          "system": "ATC",
+          "display": "Cetuximab",
+          "version": "2020"
+        },
+        {
+          "code": "L01XE47",
+          "system": "ATC",
+          "display": "Dacomitinib",
+          "version": "2020"
+        }
+      ]
+    }
+  ],
+  "lastGuidelineTherapies": [
+    {
+      "id": "f894dae0-18d4-4c7f-983c-a5815973fe9d",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "therapyLine": 1,
+      "period": {
+        "start": "2023-07-17",
+        "end": "2023-08-07"
+      },
+      "medication": [
+        {
+          "code": "L01DB01",
+          "system": "ATC",
+          "display": "Doxorubicin",
+          "version": "2020"
+        }
+      ],
+      "reasonStopped": {
+        "code": "toxicity",
+        "system": "MTB-CDS:GuidelineTherapy-StopReason"
+      }
+    }
+  ],
+  "ecogStatus": [
+    {
+      "id": "92a5a45b-df2f-47b6-8903-4131dd4d27a4",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "effectiveDate": "2023-07-17",
+      "value": {
+        "code": "2",
+        "system": "ECOG-Performance-Status"
+      }
+    },
+    {
+      "id": "75cfdd40-e419-4d3d-bc4e-6e880415501d",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "effectiveDate": "2023-07-17",
+      "value": {
+        "code": "4",
+        "system": "ECOG-Performance-Status"
+      }
+    }
+  ],
+  "specimens": [
+    {
+      "id": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "icd10": {
+        "code": "C16.0",
+        "display": "Bösartige Neubildung: Kardia",
+        "version": "2023",
+        "system": "ICD-10-GM"
+      },
+      "type": "liquid-biopsy",
+      "collection": {
+        "date": "2023-07-17",
+        "localization": "unknown",
+        "method": "liquid-biopsy"
+      }
+    }
+  ],
+  "molecularPathologyFindings": [
+    {
+      "id": "a552484e-6ca1-4478-8440-10134531fa87",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "performingInstitute": "802f9308-c304-47e9-8ac1-9ac48740dadd",
+      "issuedOn": "2023-07-17",
+      "note": "MolecularPathologyFinding notes..."
+    }
+  ],
+  "histologyReports": [
+    {
+      "id": "90851308-579e-49a9-956e-277b481bacbf",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "issuedOn": "2023-07-17",
+      "tumorMorphology": {
+        "id": "a3c8c313-64ff-4276-b7f0-be4728ee6b61",
+        "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+        "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+        "value": {
+          "code": "8851/3",
+          "display": "Gut differenziertes Liposarkom",
+          "version": "Zweite Revision",
+          "system": "ICD-O-3-M"
+        },
+        "note": "Histology finding notes..."
+      },
+      "tumorCellContent": {
+        "id": "726716ad-b1a9-4f68-b0fe-abd165cc4a29",
+        "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+        "method": "histologic",
+        "value": 0.38164
+      }
+    }
+  ],
+  "ngsReports": [
+    {
+      "id": "a57e2d30-0cdc-40d1-9e92-4d89269521c2",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "issueDate": "2023-07-17",
+      "sequencingType": "WGS",
+      "metadata": [
+        {
+          "kitType": "Agilent ExomV6",
+          "kitManufacturer": "Agilent",
+          "sequencer": "Sequencer-XYZ",
+          "referenceGenome": "HG19",
+          "pipeline": "dummy/uri/to/pipeline"
+        }
+      ],
+      "tumorCellContent": {
+        "id": "d04d0ed6-e046-49ba-bcdd-1a2bf95c9673",
+        "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+        "method": "bioinformatic",
+        "value": 0.74991
+      },
+      "brcaness": 0.39,
+      "msi": 0.35,
+      "tmb": 594349.91,
+      "simpleVariants": [
+        {
+          "id": "SNV_4a0d9724-b7c0-4465-9fa1-a056e3ebb049",
+          "chromosome": "chr6",
+          "gene": {
+            "ensemblId": "ENSG00000242908",
+            "hgncId": "HGNC:50301",
+            "symbol": "AADACL2-AS1",
+            "name": "AADACL2 antisense RNA 1"
+          },
+          "startEnd": {
+            "start": 6736035388467870105
+          },
+          "refAllele": "A",
+          "altAllele": "G",
+          "dnaChange": {
+            "code": "A>G",
+            "system": "HGVS.c"
+          },
+          "aminoAcidChange": {
+            "code": "Amino acid change code...",
+            "system": "HGVS.p"
+          },
+          "readDepth": 19,
+          "allelicFrequency": 0.75,
+          "cosmicId": "478cf4a3-53ef-438e-9bdd-6c41f675401e",
+          "dbSNPId": "d0d9070e-b54b-4608-8b81-0bcc0963883f",
+          "interpretation": {
+            "code": "Probably Inactivating",
+            "system": "ClinVAR"
+          }
+        },
+        {
+          "id": "SNV_7ad29249-dbf0-4355-8183-af05db2e7a72",
+          "chromosome": "chr2",
+          "gene": {
+            "ensemblId": "ENSG00000141338",
+            "hgncId": "HGNC:38",
+            "symbol": "ABCA8",
+            "name": "ATP binding cassette subfamily A member 8"
+          },
+          "startEnd": {
+            "start": 1672464855319477743
+          },
+          "refAllele": "T",
+          "altAllele": "C",
+          "dnaChange": {
+            "code": "T>C",
+            "system": "HGVS.c"
+          },
+          "aminoAcidChange": {
+            "code": "Amino acid change code...",
+            "system": "HGVS.p"
+          },
+          "readDepth": 23,
+          "allelicFrequency": 0.36,
+          "cosmicId": "bb9e5cda-794c-4795-b32c-6185febbff92",
+          "dbSNPId": "1d5f232c-98f8-4f62-a13b-c7c24e0b69c9",
+          "interpretation": {
+            "code": "Ambiguous",
+            "system": "ClinVAR"
+          }
+        },
+        {
+          "id": "SNV_bbcd4f8d-17f5-4c43-9bb6-0d46d2cf62a7",
+          "chromosome": "chr5",
+          "gene": {
+            "ensemblId": "ENSG00000149313",
+            "hgncId": "HGNC:14235",
+            "symbol": "AASDHPPT",
+            "name": "aminoadipate-semialdehyde dehydrogenase-phosphopantetheinyl transferase"
+          },
+          "startEnd": {
+            "start": 4251323878559029469
+          },
+          "refAllele": "A",
+          "altAllele": "C",
+          "dnaChange": {
+            "code": "A>C",
+            "system": "HGVS.c"
+          },
+          "aminoAcidChange": {
+            "code": "Amino acid change code...",
+            "system": "HGVS.p"
+          },
+          "readDepth": 37,
+          "allelicFrequency": 0.48,
+          "cosmicId": "65f7adc1-dc5c-4390-8c8f-4cf01b2e7220",
+          "dbSNPId": "d5156785-e3e6-44a3-8f0f-bcb350cd0fa4",
+          "interpretation": {
+            "code": "Function Changed",
+            "system": "ClinVAR"
+          }
+        },
+        {
+          "id": "SNV_faaef054-9380-4df0-8e74-729f2b6c9922",
+          "chromosome": "chr2",
+          "gene": {
+            "ensemblId": "ENSG00000167972",
+            "hgncId": "HGNC:33",
+            "symbol": "ABCA3",
+            "name": "ATP binding cassette subfamily A member 3"
+          },
+          "startEnd": {
+            "start": 7454627449124699972
+          },
+          "refAllele": "A",
+          "altAllele": "C",
+          "dnaChange": {
+            "code": "A>C",
+            "system": "HGVS.c"
+          },
+          "aminoAcidChange": {
+            "code": "Amino acid change code...",
+            "system": "HGVS.p"
+          },
+          "readDepth": 22,
+          "allelicFrequency": 0.37,
+          "cosmicId": "81e22a58-5330-4c75-965d-ccda79ea75f1",
+          "dbSNPId": "b8667fcc-f73a-4143-9323-dd24bda7cc73",
+          "interpretation": {
+            "code": "Function Changed",
+            "system": "ClinVAR"
+          }
+        },
+        {
+          "id": "SNV_570ed8f1-9f87-49b1-9e01-8aa7e0260e49",
+          "chromosome": "chr14",
+          "gene": {
+            "ensemblId": "ENSG00000125257",
+            "hgncId": "HGNC:55",
+            "symbol": "ABCC4",
+            "name": "ATP binding cassette subfamily C member 4"
+          },
+          "startEnd": {
+            "start": 6478613836523717707
+          },
+          "refAllele": "G",
+          "altAllele": "T",
+          "dnaChange": {
+            "code": "G>T",
+            "system": "HGVS.c"
+          },
+          "aminoAcidChange": {
+            "code": "Amino acid change code...",
+            "system": "HGVS.p"
+          },
+          "readDepth": 30,
+          "allelicFrequency": 0.47,
+          "cosmicId": "26f62629-f719-4f53-ba50-86ce23ea3ebd",
+          "dbSNPId": "883e22ae-7db9-4e59-8ff8-aeb02cc91153",
+          "interpretation": {
+            "code": "Ambiguous",
+            "system": "ClinVAR"
+          }
+        }
+      ],
+      "copyNumberVariants": [
+        {
+          "id": "CNV_ABALON_ABCA17P_high-level-gain",
+          "chromosome": "chr8",
+          "startRange": {
+            "start": 969911792064545275,
+            "end": 969911792064546084
+          },
+          "endRange": {
+            "start": 4404138220928659257,
+            "end": 4404138220928659925
+          },
+          "totalCopyNumber": 2,
+          "relativeCopyNumber": 0.18,
+          "cnA": 0.87,
+          "cnB": 0.49,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000281376",
+              "hgncId": "HGNC:49667",
+              "symbol": "ABALON",
+              "name": "apoptotic BCL2L1-antisense long non-coding RNA"
+            },
+            {
+              "ensemblId": "ENSG00000238098",
+              "hgncId": "HGNC:32972",
+              "symbol": "ABCA17P",
+              "name": "ATP binding cassette subfamily A member 17, pseudogene"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "high-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000115657",
+              "hgncId": "HGNC:47",
+              "symbol": "ABCB6",
+              "name": "ATP binding cassette subfamily B member 6 (Langereis blood group)"
+            },
+            {
+              "ensemblId": "ENSG00000184389",
+              "hgncId": "HGNC:30005",
+              "symbol": "A3GALT2",
+              "name": "alpha 1,3-galactosyltransferase 2"
+            },
+            {
+              "ensemblId": "ENSG00000023839",
+              "hgncId": "HGNC:53",
+              "symbol": "ABCC2",
+              "name": "ATP binding cassette subfamily C member 2"
+            },
+            {
+              "ensemblId": "ENSG00000127837",
+              "hgncId": "HGNC:18",
+              "symbol": "AAMP",
+              "name": "angio associated migratory cell protein"
+            }
+          ]
+        },
+        {
+          "id": "CNV_AAGAB_ABCA6_high-level-gain",
+          "chromosome": "chr3",
+          "startRange": {
+            "start": 6843968935032545040,
+            "end": 6843968935032545924
+          },
+          "endRange": {
+            "start": 3583631517115538627,
+            "end": 3583631517115539281
+          },
+          "totalCopyNumber": 4,
+          "relativeCopyNumber": 0.11,
+          "cnA": 0.15,
+          "cnB": 0.29,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000103591",
+              "hgncId": "HGNC:25662",
+              "symbol": "AAGAB",
+              "name": "alpha and gamma adaptin binding protein"
+            },
+            {
+              "ensemblId": "ENSG00000154262",
+              "hgncId": "HGNC:36",
+              "symbol": "ABCA6",
+              "name": "ATP binding cassette subfamily A member 6"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "high-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000231749",
+              "hgncId": "HGNC:39983",
+              "symbol": "ABCA9-AS1",
+              "name": "ABCA9 antisense RNA 1"
+            },
+            {
+              "ensemblId": "ENSG00000154265",
+              "hgncId": "HGNC:35",
+              "symbol": "ABCA5",
+              "name": "ATP binding cassette subfamily A member 5"
+            },
+            {
+              "ensemblId": "ENSG00000081760",
+              "hgncId": "HGNC:21298",
+              "symbol": "AACS",
+              "name": "acetoacetyl-CoA synthetase"
+            }
+          ]
+        },
+        {
+          "id": "CNV_ABCA12_AASDHPPT_ABCC2_AARS1P1_high-level-gain",
+          "chromosome": "chr5",
+          "startRange": {
+            "start": 8487172994898555456,
+            "end": 8487172994898556127
+          },
+          "endRange": {
+            "start": 2329045896118581347,
+            "end": 2329045896118581894
+          },
+          "totalCopyNumber": 3,
+          "relativeCopyNumber": 0.67,
+          "cnA": 0.47,
+          "cnB": 0.46,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000144452",
+              "hgncId": "HGNC:14637",
+              "symbol": "ABCA12",
+              "name": "ATP binding cassette subfamily A member 12"
+            },
+            {
+              "ensemblId": "ENSG00000149313",
+              "hgncId": "HGNC:14235",
+              "symbol": "AASDHPPT",
+              "name": "aminoadipate-semialdehyde dehydrogenase-phosphopantetheinyl transferase"
+            },
+            {
+              "ensemblId": "ENSG00000023839",
+              "hgncId": "HGNC:53",
+              "symbol": "ABCC2",
+              "name": "ATP binding cassette subfamily C member 2"
+            },
+            {
+              "ensemblId": "ENSG00000249038",
+              "hgncId": "HGNC:49894",
+              "symbol": "AARS1P1",
+              "name": "alanyl-tRNA synthetase 1 pseudogene 1"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "high-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000141338",
+              "hgncId": "HGNC:38",
+              "symbol": "ABCA8",
+              "name": "ATP binding cassette subfamily A member 8"
+            },
+            {
+              "ensemblId": "ENSG00000129673",
+              "hgncId": "HGNC:19",
+              "symbol": "AANAT",
+              "name": "aralkylamine N-acetyltransferase"
+            },
+            {
+              "ensemblId": "ENSG00000242908",
+              "hgncId": "HGNC:50301",
+              "symbol": "AADACL2-AS1",
+              "name": "AADACL2 antisense RNA 1"
+            }
+          ]
+        },
+        {
+          "id": "CNV_AAAS_AADAT_high-level-gain",
+          "chromosome": "chr10",
+          "startRange": {
+            "start": 1954565432038993495,
+            "end": 1954565432038994133
+          },
+          "endRange": {
+            "start": 442085989067090995,
+            "end": 442085989067091164
+          },
+          "totalCopyNumber": 4,
+          "relativeCopyNumber": 0.37,
+          "cnA": 0.98,
+          "cnB": 0.18,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000094914",
+              "hgncId": "HGNC:13666",
+              "symbol": "AAAS",
+              "name": "aladin WD repeat nucleoporin"
+            },
+            {
+              "ensemblId": "ENSG00000109576",
+              "hgncId": "HGNC:17929",
+              "symbol": "AADAT",
+              "name": "aminoadipate aminotransferase"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "high-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000023839",
+              "hgncId": "HGNC:53",
+              "symbol": "ABCC2",
+              "name": "ATP binding cassette subfamily C member 2"
+            },
+            {
+              "ensemblId": "ENSG00000150967",
+              "hgncId": "HGNC:50",
+              "symbol": "ABCB9",
+              "name": "ATP binding cassette subfamily B member 9"
+            },
+            {
+              "ensemblId": "ENSG00000149313",
+              "hgncId": "HGNC:14235",
+              "symbol": "AASDHPPT",
+              "name": "aminoadipate-semialdehyde dehydrogenase-phosphopantetheinyl transferase"
+            }
+          ]
+        },
+        {
+          "id": "CNV_A3GALT2_ABCB10P4_low-level-gain",
+          "chromosome": "chr8",
+          "startRange": {
+            "start": 1779205446909981075,
+            "end": 1779205446909981845
+          },
+          "endRange": {
+            "start": 3151805846500148631,
+            "end": 3151805846500149455
+          },
+          "totalCopyNumber": 4,
+          "relativeCopyNumber": 0.94,
+          "cnA": 0.3,
+          "cnB": 0.66,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000184389",
+              "hgncId": "HGNC:30005",
+              "symbol": "A3GALT2",
+              "name": "alpha 1,3-galactosyltransferase 2"
+            },
+            {
+              "ensemblId": "ENSG00000260053",
+              "hgncId": "HGNC:31130",
+              "symbol": "ABCB10P4",
+              "name": "ABCB10 pseudogene 4"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "low-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000167972",
+              "hgncId": "HGNC:33",
+              "symbol": "ABCA3",
+              "name": "ATP binding cassette subfamily A member 3"
+            },
+            {
+              "ensemblId": "ENSG00000231749",
+              "hgncId": "HGNC:39983",
+              "symbol": "ABCA9-AS1",
+              "name": "ABCA9 antisense RNA 1"
+            },
+            {
+              "ensemblId": "ENSG00000108846",
+              "hgncId": "HGNC:54",
+              "symbol": "ABCC3",
+              "name": "ATP binding cassette subfamily C member 3"
+            },
+            {
+              "ensemblId": "ENSG00000197953",
+              "hgncId": "HGNC:24427",
+              "symbol": "AADACL2",
+              "name": "arylacetamide deacetylase like 2"
+            }
+          ]
+        },
+        {
+          "id": "CNV_ABCA10_AADACL2_high-level-gain",
+          "chromosome": "chrX",
+          "startRange": {
+            "start": 165156786091954061,
+            "end": 165156786091954176
+          },
+          "endRange": {
+            "start": 5591033364020511004,
+            "end": 5591033364020511607
+          },
+          "totalCopyNumber": 4,
+          "relativeCopyNumber": 0.69,
+          "cnA": 0.56,
+          "cnB": 0.12,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000154263",
+              "hgncId": "HGNC:30",
+              "symbol": "ABCA10",
+              "name": "ATP binding cassette subfamily A member 10"
+            },
+            {
+              "ensemblId": "ENSG00000197953",
+              "hgncId": "HGNC:24427",
+              "symbol": "AADACL2",
+              "name": "arylacetamide deacetylase like 2"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "high-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000215458",
+              "hgncId": "HGNC:51526",
+              "symbol": "AATBC",
+              "name": "apoptosis associated transcript in bladder cancer"
+            },
+            {
+              "ensemblId": "ENSG00000249038",
+              "hgncId": "HGNC:49894",
+              "symbol": "AARS1P1",
+              "name": "alanyl-tRNA synthetase 1 pseudogene 1"
+            },
+            {
+              "ensemblId": "ENSG00000261524",
+              "hgncId": "HGNC:31129",
+              "symbol": "ABCB10P3",
+              "name": "ABCB10 pseudogene 3"
+            }
+          ]
+        },
+        {
+          "id": "CNV_AAMP_AADACL3_low-level-gain",
+          "chromosome": "chrX",
+          "startRange": {
+            "start": 7552444878262806955,
+            "end": 7552444878262807187
+          },
+          "endRange": {
+            "start": 140089034030783731,
+            "end": 140089034030784407
+          },
+          "totalCopyNumber": 2,
+          "relativeCopyNumber": 0.57,
+          "cnA": 0.26,
+          "cnB": 0.82,
+          "reportedAffectedGenes": [
+            {
+              "ensemblId": "ENSG00000127837",
+              "hgncId": "HGNC:18",
+              "symbol": "AAMP",
+              "name": "angio associated migratory cell protein"
+            },
+            {
+              "ensemblId": "ENSG00000188984",
+              "hgncId": "HGNC:32037",
+              "symbol": "AADACL3",
+              "name": "arylacetamide deacetylase like 3"
+            }
+          ],
+          "reportedFocality": "reported-focality...",
+          "type": "low-level-gain",
+          "copyNumberNeutralLoH": [
+            {
+              "ensemblId": "ENSG00000121410",
+              "hgncId": "HGNC:5",
+              "symbol": "A1BG",
+              "name": "alpha-1-B glycoprotein"
+            },
+            {
+              "ensemblId": "ENSG00000175899",
+              "hgncId": "HGNC:7",
+              "symbol": "A2M",
+              "name": "alpha-2-macroglobulin"
+            },
+            {
+              "ensemblId": "ENSG00000257408",
+              "hgncId": "HGNC:55707",
+              "symbol": "ABCA3P1",
+              "name": "ABCA3 pseudogene 1"
+            },
+            {
+              "ensemblId": "ENSG00000005471",
+              "hgncId": "HGNC:45",
+              "symbol": "ABCB4",
+              "name": "ATP binding cassette subfamily B member 4"
+            }
+          ]
+        }
+      ],
+      "dnaFusions": [
+        {
+          "id": "DNAFusion_A3GALT2_AAGAB",
+          "fusionPartner5prime": {
+            "chromosome": "chr16",
+            "position": 569568638299166051,
+            "gene": {
+              "ensemblId": "ENSG00000184389",
+              "hgncId": "HGNC:30005",
+              "symbol": "A3GALT2",
+              "name": "alpha 1,3-galactosyltransferase 2"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr1",
+            "position": 1728963273084125905,
+            "gene": {
+              "ensemblId": "ENSG00000103591",
+              "hgncId": "HGNC:25662",
+              "symbol": "AAGAB",
+              "name": "alpha and gamma adaptin binding protein"
+            }
+          },
+          "reportedNumReads": 25
+        },
+        {
+          "id": "DNAFusion_ABCA3_AASDHPPT",
+          "fusionPartner5prime": {
+            "chromosome": "chr12",
+            "position": 4142955940382701892,
+            "gene": {
+              "ensemblId": "ENSG00000167972",
+              "hgncId": "HGNC:33",
+              "symbol": "ABCA3",
+              "name": "ATP binding cassette subfamily A member 3"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr13",
+            "position": 2530447494476677762,
+            "gene": {
+              "ensemblId": "ENSG00000149313",
+              "hgncId": "HGNC:14235",
+              "symbol": "AASDHPPT",
+              "name": "aminoadipate-semialdehyde dehydrogenase-phosphopantetheinyl transferase"
+            }
+          },
+          "reportedNumReads": 29
+        },
+        {
+          "id": "DNAFusion_ABCB10P3_AAAS",
+          "fusionPartner5prime": {
+            "chromosome": "chr19",
+            "position": 216619303235013143,
+            "gene": {
+              "ensemblId": "ENSG00000261524",
+              "hgncId": "HGNC:31129",
+              "symbol": "ABCB10P3",
+              "name": "ABCB10 pseudogene 3"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr20",
+            "position": 7983660439294503113,
+            "gene": {
+              "ensemblId": "ENSG00000094914",
+              "hgncId": "HGNC:13666",
+              "symbol": "AAAS",
+              "name": "aladin WD repeat nucleoporin"
+            }
+          },
+          "reportedNumReads": 30
+        },
+        {
+          "id": "DNAFusion_A1BG_AADACL4",
+          "fusionPartner5prime": {
+            "chromosome": "chr19",
+            "position": 2761782759714541191,
+            "gene": {
+              "ensemblId": "ENSG00000121410",
+              "hgncId": "HGNC:5",
+              "symbol": "A1BG",
+              "name": "alpha-1-B glycoprotein"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr15",
+            "position": 2381966877469433813,
+            "gene": {
+              "ensemblId": "ENSG00000204518",
+              "hgncId": "HGNC:32038",
+              "symbol": "AADACL4",
+              "name": "arylacetamide deacetylase like 4"
+            }
+          },
+          "reportedNumReads": 22
+        },
+        {
+          "id": "DNAFusion_AAMP_ABCB9",
+          "fusionPartner5prime": {
+            "chromosome": "chr12",
+            "position": 2738282492147015127,
+            "gene": {
+              "ensemblId": "ENSG00000127837",
+              "hgncId": "HGNC:18",
+              "symbol": "AAMP",
+              "name": "angio associated migratory cell protein"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr18",
+            "position": 4689414126579295665,
+            "gene": {
+              "ensemblId": "ENSG00000150967",
+              "hgncId": "HGNC:50",
+              "symbol": "ABCB9",
+              "name": "ATP binding cassette subfamily B member 9"
+            }
+          },
+          "reportedNumReads": 44
+        },
+        {
+          "id": "DNAFusion_AACS_ABCB10",
+          "fusionPartner5prime": {
+            "chromosome": "chr19",
+            "position": 5162788528310959454,
+            "gene": {
+              "ensemblId": "ENSG00000081760",
+              "hgncId": "HGNC:21298",
+              "symbol": "AACS",
+              "name": "acetoacetyl-CoA synthetase"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr2",
+            "position": 281250493569316672,
+            "gene": {
+              "ensemblId": "ENSG00000135776",
+              "hgncId": "HGNC:41",
+              "symbol": "ABCB10",
+              "name": "ATP binding cassette subfamily B member 10"
+            }
+          },
+          "reportedNumReads": 28
+        },
+        {
+          "id": "DNAFusion_ABCA3_ABCA8",
+          "fusionPartner5prime": {
+            "chromosome": "chr17",
+            "position": 7239027143174816791,
+            "gene": {
+              "ensemblId": "ENSG00000167972",
+              "hgncId": "HGNC:33",
+              "symbol": "ABCA3",
+              "name": "ATP binding cassette subfamily A member 3"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr20",
+            "position": 3415200056745807403,
+            "gene": {
+              "ensemblId": "ENSG00000141338",
+              "hgncId": "HGNC:38",
+              "symbol": "ABCA8",
+              "name": "ATP binding cassette subfamily A member 8"
+            }
+          },
+          "reportedNumReads": 47
+        },
+        {
+          "id": "DNAFusion_AATF_AASS",
+          "fusionPartner5prime": {
+            "chromosome": "chr14",
+            "position": 6207520478306983467,
+            "gene": {
+              "ensemblId": "ENSG00000275700",
+              "hgncId": "HGNC:19235",
+              "symbol": "AATF",
+              "name": "apoptosis antagonizing transcription factor"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr7",
+            "position": 966733822586135931,
+            "gene": {
+              "ensemblId": "ENSG00000008311",
+              "hgncId": "HGNC:17366",
+              "symbol": "AASS",
+              "name": "aminoadipate-semialdehyde synthase"
+            }
+          },
+          "reportedNumReads": 32
+        },
+        {
+          "id": "DNAFusion_AATBC_AARD",
+          "fusionPartner5prime": {
+            "chromosome": "chr9",
+            "position": 6948858453904558539,
+            "gene": {
+              "ensemblId": "ENSG00000215458",
+              "hgncId": "HGNC:51526",
+              "symbol": "AATBC",
+              "name": "apoptosis associated transcript in bladder cancer"
+            }
+          },
+          "fusionPartner3prime": {
+            "chromosome": "chr21",
+            "position": 5188489683141511746,
+            "gene": {
+              "ensemblId": "ENSG00000205002",
+              "hgncId": "HGNC:33842",
+              "symbol": "AARD",
+              "name": "alanine and arginine rich domain containing protein"
+            }
+          },
+          "reportedNumReads": 21
+        }
+      ],
+      "rnaFusions": [
+        {
+          "id": "RNAFusion_A3GALT2_ABCB6",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000184389",
+              "hgncId": "HGNC:30005",
+              "symbol": "A3GALT2",
+              "name": "alpha 1,3-galactosyltransferase 2"
+            },
+            "transcriptId": "7a4ba182-4cfb-49d6-8ca2-91336c956b02",
+            "exon": "7328a6ab-b0ab-460a-890f-d175be94cba4",
+            "position": 1009212469473862062,
+            "strand": "+"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000115657",
+              "hgncId": "HGNC:47",
+              "symbol": "ABCB6",
+              "name": "ATP binding cassette subfamily B member 6 (Langereis blood group)"
+            },
+            "transcriptId": "7819e2c2-6d14-4acb-bb6e-609f733de7a2",
+            "exon": "dfac0cc0-2af7-490f-b19d-59b35c92ddd2",
+            "position": 6271859040431005877,
+            "strand": "-"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "c500e0a3-e321-4868-849e-69c6dfeb1f4a",
+          "reportedNumReads": 29
+        },
+        {
+          "id": "RNAFusion_ABCB10P4_A2ML1-AS1",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000260053",
+              "hgncId": "HGNC:31130",
+              "symbol": "ABCB10P4",
+              "name": "ABCB10 pseudogene 4"
+            },
+            "transcriptId": "6aee0c6b-da8d-4662-bf12-1c8370b81f95",
+            "exon": "f4918411-9cb9-4ae1-97ad-0b7b5baf6175",
+            "position": 9124790507143722597,
+            "strand": "+"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000256661",
+              "hgncId": "HGNC:41022",
+              "symbol": "A2ML1-AS1",
+              "name": "A2ML1 antisense RNA 1"
+            },
+            "transcriptId": "e0f6acdb-d046-461c-8b64-59d1a462d23b",
+            "exon": "2dddd42d-e2b1-46f8-9cf9-542b9ec2a62a",
+            "position": 461028552708332541,
+            "strand": "-"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "daf00c8b-ac2b-4f53-8656-e3f634208661",
+          "reportedNumReads": 22
+        },
+        {
+          "id": "RNAFusion_A2ML1-AS2_AARS1P1",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000256904",
+              "hgncId": "HGNC:41523",
+              "symbol": "A2ML1-AS2",
+              "name": "A2ML1 antisense RNA 2"
+            },
+            "transcriptId": "9658f20f-be84-4127-88a9-d4dbad3d6edc",
+            "exon": "e74b821a-b0df-4f3f-8ed5-97ff6178a8bd",
+            "position": 6743012027657999130,
+            "strand": "+"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000249038",
+              "hgncId": "HGNC:49894",
+              "symbol": "AARS1P1",
+              "name": "alanyl-tRNA synthetase 1 pseudogene 1"
+            },
+            "transcriptId": "649cc535-c601-4b71-b054-a2cf2190c3d9",
+            "exon": "9dd65205-fc5a-4d49-a0dc-d8b4ee312416",
+            "position": 4014336725221699201,
+            "strand": "-"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "cff9eab3-acf4-43f9-9f2c-49c6d993a338",
+          "reportedNumReads": 25
+        },
+        {
+          "id": "RNAFusion_ABCA9_ABCB10P1",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000154258",
+              "hgncId": "HGNC:39",
+              "symbol": "ABCA9",
+              "name": "ATP binding cassette subfamily A member 9"
+            },
+            "transcriptId": "5f51f425-e62a-4c0d-a0a6-aec8362b65a5",
+            "exon": "11a2306d-7f2f-46a0-beab-4e318ae57eb0",
+            "position": 7451485235432246024,
+            "strand": "-"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000274099",
+              "hgncId": "HGNC:14114",
+              "symbol": "ABCB10P1",
+              "name": "ABCB10 pseudogene 1"
+            },
+            "transcriptId": "a8371c6b-49c1-4144-95bb-dc8db462afe0",
+            "exon": "3a3dd891-1241-46a0-bbb1-9993e176cbb4",
+            "position": 2144193097707360397,
+            "strand": "+"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "56ab66dc-c12b-4f3e-bee8-def0ade530a3",
+          "reportedNumReads": 36
+        },
+        {
+          "id": "RNAFusion_A2M-AS1_AAR2",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000245105",
+              "hgncId": "HGNC:27057",
+              "symbol": "A2M-AS1",
+              "name": "A2M antisense RNA 1"
+            },
+            "transcriptId": "2f275d59-e394-4d89-ac8e-8b77ec4841e6",
+            "exon": "dacc56e1-a33e-4cc7-a4e5-c24c6c7c3635",
+            "position": 8438088205780109333,
+            "strand": "-"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000131043",
+              "hgncId": "HGNC:15886",
+              "symbol": "AAR2",
+              "name": "AAR2 splicing factor"
+            },
+            "transcriptId": "23df8764-9291-4b76-94c7-9dda97e2f226",
+            "exon": "6c654cf3-387f-40e4-848d-4ba706eb5bb6",
+            "position": 4758763569629035168,
+            "strand": "+"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "a94faac9-c8dc-4c16-8b92-5cb1ac88b9ef",
+          "reportedNumReads": 32
+        },
+        {
+          "id": "RNAFusion_ABCB7_AADAT",
+          "fusionPartner5prime": {
+            "gene": {
+              "ensemblId": "ENSG00000131269",
+              "hgncId": "HGNC:48",
+              "symbol": "ABCB7",
+              "name": "ATP binding cassette subfamily B member 7"
+            },
+            "transcriptId": "5058c281-c825-45fc-b124-4d5c584b8eac",
+            "exon": "ebdc3b8f-2f7c-4809-b94c-67b2fb3873ae",
+            "position": 7631148909251407357,
+            "strand": "+"
+          },
+          "fusionPartner3prime": {
+            "gene": {
+              "ensemblId": "ENSG00000109576",
+              "hgncId": "HGNC:17929",
+              "symbol": "AADAT",
+              "name": "aminoadipate aminotransferase"
+            },
+            "transcriptId": "e2740ebd-6ebc-498e-a00e-c208c7b11414",
+            "exon": "39d2c8b9-eb52-4d5c-bcf8-1517c69f72a0",
+            "position": 5619672559603971,
+            "strand": "-"
+          },
+          "effect": "RNA Fusion effect...",
+          "cosmicId": "911ac14d-1a2f-43af-8b48-03539de01946",
+          "reportedNumReads": 49
+        }
+      ],
+      "rnaSeqs": [
+        {
+          "id": "RNASeq_7b5126ff-2c19-41a0-9125-edd4d21e2552",
+          "entrezId": "7b5126ff-2c19-41a0-9125-edd4d21e2552",
+          "ensemblId": "9a728d75-8bf8-4287-90d0-83882073c266",
+          "gene": {
+            "ensemblId": "ENSG00000129673",
+            "hgncId": "HGNC:19",
+            "symbol": "AANAT",
+            "name": "aralkylamine N-acetyltransferase"
+          },
+          "transcriptId": "ed2b94d6-454d-4346-bd62-573a1856d707",
+          "fragmentsPerKilobaseMillion": 0.52,
+          "fromNGS": false,
+          "tissueCorrectedExpression": true,
+          "rawCounts": 393,
+          "librarySize": 97,
+          "cohortRanking": 2
+        },
+        {
+          "id": "RNASeq_365a53d3-40c4-4109-8d33-a39ed9f468dc",
+          "entrezId": "365a53d3-40c4-4109-8d33-a39ed9f468dc",
+          "ensemblId": "454d1928-2788-48eb-aa15-865a10b94b27",
+          "gene": {
+            "ensemblId": "ENSG00000260053",
+            "hgncId": "HGNC:31130",
+            "symbol": "ABCB10P4",
+            "name": "ABCB10 pseudogene 4"
+          },
+          "transcriptId": "a8b61e97-4490-407f-91a2-fb73a23d5b5f",
+          "fragmentsPerKilobaseMillion": 0.5,
+          "fromNGS": true,
+          "tissueCorrectedExpression": false,
+          "rawCounts": 410,
+          "librarySize": 82,
+          "cohortRanking": 5
+        },
+        {
+          "id": "RNASeq_277f70a7-e07b-4f22-afc2-8a88b00f9976",
+          "entrezId": "277f70a7-e07b-4f22-afc2-8a88b00f9976",
+          "ensemblId": "52499e91-dcc4-48b8-91a0-d972eec90f8e",
+          "gene": {
+            "ensemblId": "ENSG00000256661",
+            "hgncId": "HGNC:41022",
+            "symbol": "A2ML1-AS1",
+            "name": "A2ML1 antisense RNA 1"
+          },
+          "transcriptId": "b8b59f55-b617-44b7-b404-af59bbfe0919",
+          "fragmentsPerKilobaseMillion": 0.55,
+          "fromNGS": true,
+          "tissueCorrectedExpression": false,
+          "rawCounts": 968,
+          "librarySize": 47,
+          "cohortRanking": 2
+        },
+        {
+          "id": "RNASeq_4a89653e-ce71-4365-9be3-36d33b6f290a",
+          "entrezId": "4a89653e-ce71-4365-9be3-36d33b6f290a",
+          "ensemblId": "134a6d3b-d3d1-45dc-a3f6-21011f731fbf",
+          "gene": {
+            "ensemblId": "ENSG00000141338",
+            "hgncId": "HGNC:38",
+            "symbol": "ABCA8",
+            "name": "ATP binding cassette subfamily A member 8"
+          },
+          "transcriptId": "d66791b8-6448-4783-a3ad-605b0945ec4e",
+          "fragmentsPerKilobaseMillion": 0.71,
+          "fromNGS": true,
+          "tissueCorrectedExpression": true,
+          "rawCounts": 294,
+          "librarySize": 35,
+          "cohortRanking": 3
+        },
+        {
+          "id": "RNASeq_38a618bd-0a0c-41e1-817e-62442736a386",
+          "entrezId": "38a618bd-0a0c-41e1-817e-62442736a386",
+          "ensemblId": "b7ca94a4-d993-4901-89b8-e1378c9b1ba8",
+          "gene": {
+            "ensemblId": "ENSG00000197150",
+            "hgncId": "HGNC:49",
+            "symbol": "ABCB8",
+            "name": "ATP binding cassette subfamily B member 8"
+          },
+          "transcriptId": "245e560e-7f79-441f-afad-e79c4cb78fb0",
+          "fragmentsPerKilobaseMillion": 0.04,
+          "fromNGS": true,
+          "tissueCorrectedExpression": false,
+          "rawCounts": 371,
+          "librarySize": 68,
+          "cohortRanking": 8
+        }
+      ]
+    }
+  ],
+  "carePlans": [
+    {
+      "id": "72590544-bcd0-465c-bb8f-5890da313beb",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "issuedOn": "2023-07-17",
+      "description": "MTB conference protocol...",
+      "recommendations": [
+        "8169debf-0be8-4cb6-9f18-8a9e813aa22a",
+        "4877dabd-8281-4bb7-a80e-3e42861dc235"
+      ],
+      "geneticCounsellingRequest": "c7045c96-d0e8-4445-b627-30a7fbf34588",
+      "rebiopsyRequests": [
+        "a4914c11-b832-4480-871f-bde171cf410a"
+      ],
+      "studyInclusionRequests": [
+        "7e94cea6-08d6-4f69-bf27-dc89122d87ac"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "8169debf-0be8-4cb6-9f18-8a9e813aa22a",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "issuedOn": "2023-07-17",
+      "medication": [
+        {
+          "code": "L01XE39",
+          "system": "ATC",
+          "display": "Midostaurin",
+          "version": "2020"
+        },
+        {
+          "code": "L01XX42",
+          "system": "ATC",
+          "display": "Panobinostat",
+          "version": "2020"
+        }
+      ],
+      "priority": "4",
+      "levelOfEvidence": {
+        "grading": {
+          "code": "m1B",
+          "system": "MTB-CDS:Level-of-Evidence:Grading"
+        },
+        "addendums": [
+          {
+            "code": "R",
+            "system": "MTB-CDS:Level-of-Evidence:Addendum"
+          },
+          {
+            "code": "is",
+            "system": "MTB-CDS:Level-of-Evidence:Addendum"
+          }
+        ]
+      },
+      "ngsReport": "a57e2d30-0cdc-40d1-9e92-4d89269521c2",
+      "supportingVariants": [
+        "CNV_AAGAB_ABCA6_high-level-gain",
+        "CNV_AAMP_AADACL3_low-level-gain",
+        "SNV_bbcd4f8d-17f5-4c43-9bb6-0d46d2cf62a7"
+      ]
+    },
+    {
+      "id": "4877dabd-8281-4bb7-a80e-3e42861dc235",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "diagnosis": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "issuedOn": "2023-07-17",
+      "medication": [
+        {
+          "code": "L01XX42",
+          "system": "ATC",
+          "display": "Panobinostat",
+          "version": "2020"
+        },
+        {
+          "code": "L01XE12",
+          "system": "ATC",
+          "display": "Vandetanib",
+          "version": "2020"
+        }
+      ],
+      "priority": "4",
+      "levelOfEvidence": {
+        "grading": {
+          "code": "m1A",
+          "system": "MTB-CDS:Level-of-Evidence:Grading"
+        },
+        "addendums": [
+          {
+            "code": "R",
+            "system": "MTB-CDS:Level-of-Evidence:Addendum"
+          },
+          {
+            "code": "is",
+            "system": "MTB-CDS:Level-of-Evidence:Addendum"
+          },
+          {
+            "code": "iv",
+            "system": "MTB-CDS:Level-of-Evidence:Addendum"
+          }
+        ]
+      },
+      "ngsReport": "a57e2d30-0cdc-40d1-9e92-4d89269521c2",
+      "supportingVariants": [
+        "CNV_AAGAB_ABCA6_high-level-gain",
+        "CNV_ABCA12_AASDHPPT_ABCC2_AARS1P1_high-level-gain",
+        "SNV_7ad29249-dbf0-4355-8183-af05db2e7a72",
+        "SNV_bbcd4f8d-17f5-4c43-9bb6-0d46d2cf62a7",
+        "CNV_AAAS_AADAT_high-level-gain",
+        "CNV_ABALON_ABCA17P_high-level-gain",
+        "CNV_AAMP_AADACL3_low-level-gain",
+        "SNV_faaef054-9380-4df0-8e74-729f2b6c9922",
+        "SNV_4a0d9724-b7c0-4465-9fa1-a056e3ebb049"
+      ]
+    }
+  ],
+  "geneticCounsellingRequests": [
+    {
+      "id": "c7045c96-d0e8-4445-b627-30a7fbf34588",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "issuedOn": "2023-07-17",
+      "reason": "Some reason for genetic counselling..."
+    }
+  ],
+  "rebiopsyRequests": [
+    {
+      "id": "a4914c11-b832-4480-871f-bde171cf410a",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "issuedOn": "2023-07-17"
+    }
+  ],
+  "histologyReevaluationRequests": [
+    {
+      "id": "3ab6c697-30f7-4227-b36f-eab43650e5e7",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "specimen": "6ee89798-893a-4261-b050-8c250ea2bd6c",
+      "issuedOn": "2023-07-17"
+    }
+  ],
+  "studyInclusionRequests": [
+    {
+      "id": "7e94cea6-08d6-4f69-bf27-dc89122d87ac",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "reason": "38e1ee76-ba59-42c8-af7a-9938330dab60",
+      "nctNumber": "NCT84044685",
+      "issuedOn": "2023-07-17"
+    }
+  ],
+  "claims": [
+    {
+      "id": "7fd9abf5-1df9-4110-b5ce-f4f84d650ebc",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "issuedOn": "2023-07-17",
+      "therapy": "8169debf-0be8-4cb6-9f18-8a9e813aa22a"
+    },
+    {
+      "id": "0d561806-7719-46eb-8cf9-1ac05b446a54",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "issuedOn": "2023-07-17",
+      "therapy": "4877dabd-8281-4bb7-a80e-3e42861dc235"
+    }
+  ],
+  "claimResponses": [
+    {
+      "id": "058b5769-c3e1-48c6-978a-24d88c65f026",
+      "claim": "7fd9abf5-1df9-4110-b5ce-f4f84d650ebc",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "issuedOn": "2023-07-17",
+      "status": "accepted",
+      "reason": "standard-therapy-not-exhausted"
+    },
+    {
+      "id": "65694f93-7ced-4c13-8b7e-527b6d07f0d0",
+      "claim": "0d561806-7719-46eb-8cf9-1ac05b446a54",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "issuedOn": "2023-07-17",
+      "status": "rejected",
+      "reason": "other"
+    }
+  ],
+  "molecularTherapies": [
+    {
+      "history": [
+        {
+          "id": "880fdc1e-592b-466c-bb21-a63c473fb9ed",
+          "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+          "recordedOn": "2023-07-17",
+          "basedOn": "8169debf-0be8-4cb6-9f18-8a9e813aa22a",
+          "period": {
+            "start": "2023-07-17",
+            "end": "2023-07-17"
+          },
+          "medication": [
+            {
+              "code": "L01XE39",
+              "system": "ATC",
+              "display": "Midostaurin",
+              "version": "2020"
+            },
+            {
+              "code": "L01XX42",
+              "system": "ATC",
+              "display": "Panobinostat",
+              "version": "2020"
+            }
+          ],
+          "dosage": ">=50%",
+          "reasonStopped": {
+            "code": "medical-reason",
+            "system": "MTB-CDS:MolecularTherapy:StopReason"
+          },
+          "note": "Notes on the Therapy...",
+          "status": "stopped"
+        }
+      ]
+    },
+    {
+      "history": [
+        {
+          "id": "77f76e68-b810-4e25-b9d6-fec8215ff08a",
+          "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+          "recordedOn": "2023-07-17",
+          "basedOn": "4877dabd-8281-4bb7-a80e-3e42861dc235",
+          "period": {
+            "start": "2023-07-17",
+            "end": "2023-07-17"
+          },
+          "medication": [
+            {
+              "code": "L01XX42",
+              "system": "ATC",
+              "display": "Panobinostat",
+              "version": "2020"
+            },
+            {
+              "code": "L01XE12",
+              "system": "ATC",
+              "display": "Vandetanib",
+              "version": "2020"
+            }
+          ],
+          "dosage": "<50%",
+          "note": "Notes on the Therapy...",
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "id": "b89d9184-edcb-41a2-9f5a-d9bd38d4a502",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "therapy": "880fdc1e-592b-466c-bb21-a63c473fb9ed",
+      "effectiveDate": "2023-07-17",
+      "value": {
+        "code": "SD",
+        "system": "RECIST"
+      }
+    },
+    {
+      "id": "7908a152-97c3-4dbf-819e-b5ff4510af59",
+      "patient": "24eb414a-dbfe-47a4-8911-2c1896abaee4",
+      "therapy": "77f76e68-b810-4e25-b9d6-fec8215ff08a",
+      "effectiveDate": "2023-07-17",
+      "value": {
+        "code": "CR",
+        "system": "RECIST"
+      }
+    }
+  ]
+}
