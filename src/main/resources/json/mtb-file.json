@@ -134,22 +134,7 @@
                   "type": "string"
                 },
                 "gene": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "ensemblId": {
-                      "type": "string"
-                    },
-                    "hgncId": {
-                      "type": "string"
-                    },
-                    "symbol": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/definitions/Gene"
                 },
                 "fragmentsPerKilobaseMillion": {
                   "type": "number"
@@ -215,22 +200,7 @@
                   "type": "string"
                 },
                 "gene": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "ensemblId": {
-                      "type": "string"
-                    },
-                    "hgncId": {
-                      "type": "string"
-                    },
-                    "symbol": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/definitions/Gene"
                 },
                 "dnaChange": {
                   "type": "object",
@@ -326,22 +296,7 @@
                 "reportedAffectedGenes": {
                   "type": "array",
                   "items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                      "ensemblId": {
-                        "type": "string"
-                      },
-                      "hgncId": {
-                        "type": "string"
-                      },
-                      "symbol": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      }
-                    }
+                    "$ref": "#/definitions/Gene"
                   }
                 },
                 "totalCopyNumber": {
@@ -430,28 +385,7 @@
             "type": "string"
           },
           "tumorCellContent": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "specimen": {
-                "type": "string"
-              },
-              "method": {
-                "$ref": "#/definitions/ObservationMethod"
-              },
-              "value": {
-                "type": "number"
-              }
-            },
-            "required": [
-              "id",
-              "specimen",
-              "method",
-              "value"
-            ]
+            "$ref": "#/definitions/TumorCellContent"
           },
           "metadata": {
             "type": "array",
@@ -501,74 +435,10 @@
                   "type": "string"
                 },
                 "fusionPartner5prime": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "chromosome": {
-                      "type": "string"
-                    },
-                    "position": {
-                      "type": "number"
-                    },
-                    "gene": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "ensemblId": {
-                          "type": "string"
-                        },
-                        "hgncId": {
-                          "type": "string"
-                        },
-                        "symbol": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "chromosome",
-                    "position",
-                    "gene"
-                  ]
+                  "$ref": "#/definitions/DnaFusionPartner"
                 },
                 "fusionPartner3prime": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "chromosome": {
-                      "type": "string"
-                    },
-                    "position": {
-                      "type": "number"
-                    },
-                    "gene": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "ensemblId": {
-                          "type": "string"
-                        },
-                        "hgncId": {
-                          "type": "string"
-                        },
-                        "symbol": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "chromosome",
-                    "position",
-                    "gene"
-                  ]
+                  "$ref": "#/definitions/DnaFusionPartner"
                 },
                 "reportedNumReads": {
                   "type": "integer"
@@ -586,90 +456,10 @@
               "additionalProperties": false,
               "properties": {
                 "fusionPartner3prime": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "transcriptId": {
-                      "type": "string"
-                    },
-                    "exon": {
-                      "type": "string"
-                    },
-                    "position": {
-                      "type": "number"
-                    },
-                    "strand": {
-                      "$ref": "#/definitions/Strand"
-                    },
-                    "gene": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "ensemblId": {
-                          "type": "string"
-                        },
-                        "hgncId": {
-                          "type": "string"
-                        },
-                        "symbol": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "transcriptId",
-                    "strand",
-                    "position",
-                    "exon",
-                    "gene"
-                  ]
+                  "$ref": "#/definitions/RnaFusionPartner"
                 },
                 "fusionPartner5prime": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "transcriptId": {
-                      "type": "string"
-                    },
-                    "exon": {
-                      "type": "string"
-                    },
-                    "position": {
-                      "type": "number"
-                    },
-                    "strand": {
-                      "$ref": "#/definitions/Strand"
-                    },
-                    "gene": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "ensemblId": {
-                          "type": "string"
-                        },
-                        "hgncId": {
-                          "type": "string"
-                        },
-                        "symbol": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "transcriptId",
-                    "strand",
-                    "position",
-                    "exon",
-                    "gene"
-                  ]
+                  "$ref": "#/definitions/RnaFusionPartner"
                 },
                 "id": {
                   "type": "string"
@@ -801,25 +591,7 @@
             "format": "date"
           },
           "value": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "code": {
-                "$ref": "#/definitions/ECOG"
-              },
-              "display": {
-                "type": "string"
-              },
-              "system": {
-                "type": "string"
-              },
-              "version": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "code"
-            ]
+            "$ref": "#/definitions/EcogStatusValue"
           }
         },
         "required": [
@@ -839,29 +611,7 @@
             "type": "string"
           },
           "medication": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "system": {
-                  "$ref": "#/definitions/System"
-                },
-                "display": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "code",
-                "system"
-              ]
-            }
+            "$ref": "#/definitions/Medication"
           },
           "therapyLine": {
             "type": "integer"
@@ -890,28 +640,7 @@
             "type": "string"
           },
           "tumorCellContent": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "specimen": {
-                "type": "string"
-              },
-              "method": {
-                "$ref": "#/definitions/ObservationMethod"
-              },
-              "value": {
-                "type": "number"
-              }
-            },
-            "required": [
-              "id",
-              "specimen",
-              "method",
-              "value"
-            ]
+            "$ref": "#/definitions/TumorCellContent"
           },
           "tumorMorphology": {
             "type": "object",
@@ -927,25 +656,7 @@
                 "type": "string"
               },
               "value": {
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "display": {
-                    "type": "string"
-                  },
-                  "system": {
-                    "type": "string"
-                  },
-                  "version": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "code"
-                ]
+                "$ref": "#/definitions/TumorMorphologyValue"
               },
               "patient": {
                 "type": "string"
@@ -989,29 +700,7 @@
             "type": "string"
           },
           "medication": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "system": {
-                  "$ref": "#/definitions/System"
-                },
-                "display": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "code",
-                "system"
-              ]
-            }
+            "$ref": "#/definitions/Medication"
           },
           "supportingVariants": {
             "type": "array",
@@ -1126,29 +815,7 @@
             "type": "string"
           },
           "medication": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "system": {
-                  "$ref": "#/definitions/System"
-                },
-                "display": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "code",
-                "system"
-              ]
-            }
+            "$ref": "#/definitions/Medication"
           },
           "therapyLine": {
             "type": "integer"
@@ -1157,21 +824,7 @@
             "type": "string"
           },
           "period": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "start": {
-                "type": "string",
-                "format": "date"
-              },
-              "end": {
-                "type": "string",
-                "format": "date"
-              }
-            },
-            "required": [
-              "start"
-            ]
+            "$ref": "#/definitions/PeriodStart"
           },
           "patient": {
             "type": "string"
@@ -1197,50 +850,10 @@
               "additionalProperties": false,
               "properties": {
                 "reasonStopped": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "code": {
-                      "$ref": "#/definitions/MolecularTherapyStopReason"
-                    },
-                    "display": {
-                      "type": "string"
-                    },
-                    "system": {
-                      "type": "string"
-                    },
-                    "version": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "code"
-                  ]
+                  "$ref": "#/definitions/MolekularTherapyReasonStopped"
                 },
                 "medication": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                      "code": {
-                        "type": "string"
-                      },
-                      "system": {
-                        "$ref": "#/definitions/System"
-                      },
-                      "display": {
-                        "type": "string"
-                      },
-                      "version": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "code",
-                      "system"
-                    ]
-                  }
+                  "$ref": "#/definitions/Medication"
                 },
                 "id": {
                   "type": "string"
@@ -1252,22 +865,7 @@
                   "$ref": "#/definitions/Dosage"
                 },
                 "period": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "start": {
-                      "type": "string",
-                      "format": "date"
-                    },
-                    "end": {
-                      "type": "string",
-                      "format": "date"
-                    }
-                  },
-                  "required": [
-                    "start",
-                    "end"
-                  ]
+                  "$ref": "#/definitions/PeriodStartEnd"
                 },
                 "patient": {
                   "type": "string"
@@ -1528,21 +1126,7 @@
           "type": "string"
         },
         "period": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "start": {
-              "type": "string",
-              "format": "date"
-            },
-            "end": {
-              "type": "string",
-              "format": "date"
-            }
-          },
-          "required": [
-            "start"
-          ]
+          "$ref": "#/definitions/PeriodStart"
         }
       },
       "required": [
@@ -1949,6 +1533,222 @@
       "properties": {
         "code": {
           "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "PeriodStart": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "start"
+      ]
+    },
+    "PeriodStartEnd": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    },
+    "Gene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ensemblId": {
+          "type": "string"
+        },
+        "hgncId": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Medication": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "system": {
+            "$ref": "#/definitions/System"
+          },
+          "display": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "system"
+        ]
+      }
+    },
+    "DnaFusionPartner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "chromosome": {
+          "type": "string"
+        },
+        "position": {
+          "type": "number"
+        },
+        "gene": {
+          "$ref": "#/definitions/Gene"
+        }
+      },
+      "required": [
+        "chromosome",
+        "position",
+        "gene"
+      ]
+    },
+    "RnaFusionPartner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transcriptId": {
+          "type": "string"
+        },
+        "exon": {
+          "type": "string"
+        },
+        "position": {
+          "type": "number"
+        },
+        "strand": {
+          "$ref": "#/definitions/Strand"
+        },
+        "gene": {
+          "$ref": "#/definitions/Gene"
+        }
+      },
+      "required": [
+        "transcriptId",
+        "strand",
+        "position",
+        "exon",
+        "gene"
+      ]
+    },
+    "TumorMorphologyValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "EcogStatusValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/definitions/ECOG"
+        },
+        "display": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "NumberValue": {
+      "type": "number"
+    },
+    "TumorCellContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "specimen": {
+          "type": "string"
+        },
+        "method": {
+          "$ref": "#/definitions/ObservationMethod"
+        },
+        "value": {
+          "$ref": "#/definitions/NumberValue"
+        }
+      },
+      "required": [
+        "id",
+        "specimen",
+        "method",
+        "value"
+      ]
+    },
+    "MolekularTherapyReasonStopped": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/definitions/MolecularTherapyStopReason"
         },
         "display": {
           "type": "string"
