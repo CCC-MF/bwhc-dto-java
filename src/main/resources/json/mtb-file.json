@@ -858,6 +858,24 @@
                 "id": {
                   "type": "string"
                 },
+                "notDoneReason": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "$ref": "#/definitions/NotDoneReasonCode"
+                    },
+                    "display": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code"
+                  ]
+                },
                 "basedOn": {
                   "type": "string"
                 },
@@ -1762,6 +1780,22 @@
       },
       "required": [
         "code"
+      ]
+    },
+    "NotDoneReasonCode": {
+      "type": "string",
+      "enum": [
+        "payment-refused",
+        "payment-pending",
+        "no-indication",
+        "medical-reason",
+        "patient-refusal",
+        "patient-death",
+        "other-therapy-chosen",
+        "continued-externally",
+        "lost-to-fu",
+        "other",
+        "unknown"
       ]
     }
   },
